@@ -9,7 +9,12 @@ const ProjectHolder = styled.div`
     flex-flow:column;
     width:80%;
     margin:auto;
+    flex-wrap:wrap;
     justify-content:space-evenly;
+    @media(min-width:600px){
+        flex-flow:row;
+        flex-wrap: wrap;
+    }
 `
 function Projects() {
     return(
