@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 const Wrapper = styled.div`
   margin:auto;
   display:block;
+  min-width:310px;
 `
 function App() {
   return (

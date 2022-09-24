@@ -16,26 +16,25 @@ const Image = styled.img`
 `
 const Title = styled.p`
 
-font-size:20px;
-margin:2px;
-font-family: 'Montserrat', sans-serif;
+    font-size:20px;
+    margin:2px;
+    font-family: 'Montserrat', sans-serif;
 
 `
 const Description = styled.p`
     font-size:10px;
     margin:2px;
     font-family: 'Montserrat', sans-serif;
-
 `
 const GoTo = styled.a`
-text-decoration:none;
-color:black;
+    text-decoration:none;
+    color:black;
 `
 function Project(props) {
     return(
         <Wrapper>
-            <Image src={props.img}/>
-            <GoTo href = {props.link}><Title>{props.name}</Title></GoTo>
+            <a target = "_blank" href = {props.link}><Image src={props.img}/></a>
+            <GoTo target = "_blank" href = {props.link}><Title>{props.name}</Title></GoTo>
             <Description>{props.description}</Description>      
         </Wrapper>
     )
