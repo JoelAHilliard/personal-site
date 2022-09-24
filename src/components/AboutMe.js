@@ -8,13 +8,14 @@ const Selfie = styled.img`
 width: 200px;
 height: 250px;
 border: 2px solid black;
+margin-top:20px;
 `
 const Wrapper = styled.div`
 display: flex;
 flex-flow:column;
 align-items:center;
 justify-content:center;
-height: 50vh;
+
 `
 const LinkBox = styled.div`
     display:flex;

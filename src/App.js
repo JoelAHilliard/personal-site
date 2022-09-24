@@ -1,54 +1,16 @@
-import React, { useForm,useEffect, useRef, useState, useHistory } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import AboutMe from './components/AboutMe';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-} from "react-router-dom";
-import Projects from './components/Projects';
+import NavBar from './components/NavBar';
 
-const Bar = styled.div `
-    text-align: left;
-    padding: 5px;
-    background:black;
-    height: 40px;
-    width: 100%;
-    display: flex;
-    flex-flow:row;
-    justify-content:center;
-    color:white;
-    line-height:0.5;
+const Wrapper = styled.div`
+  margin:auto;
+  display:block;
 `
-const Text = styled.p`
-font-family: 'Montserrat', sans-serif;
-;
-`
-function NavBar() {
-
-    return(
-      <div>
-          <BrowserRouter>
-
-          <Bar>
-              <Text><Link style={{ textDecoration: 'none',color:'white' }} to="/">Joel Hilliard</Link> -&nbsp;</Text>
-              <Text><Link style={{ textDecoration: 'none',color:'white' }} to="/projects">Projects</Link></Text> 
-          </Bar>
-            <Routes>
-              <Route exact path="/" element={<AboutMe/>} />
-              <Route exact path="/projects" element={<Projects/>} />
-            </Routes>
-          </BrowserRouter>
-        </div>
-    )
-}
 function App() {
-
   return (
-    <div>
-      {NavBar()}
-    </div>
+    <Wrapper>
+      <NavBar/>
+    </Wrapper>
   );
 }
 
