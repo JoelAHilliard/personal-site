@@ -56,7 +56,8 @@ const ModalTitle = styled.h2`
 }
 `
 function MakeBulletList(props) {  
-    const bullets = Object.entries(props.data.bullets); 
+    const bullets = Object.entries(props.data.bullets);
+    console.log(bullets) 
     const listOfBullets = bullets.map(([key,val]) =>  
   
       <BulletEntry>{val}</BulletEntry>  
