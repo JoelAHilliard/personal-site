@@ -4,6 +4,8 @@ import Project from './Project.js'
 import ETHFeesImg from '../images/ETHFees.jpg'
 import ConsensusTaxImg from '../images/consensustax.jpg'
 import GalaxyImage from '../images/galaxy.jpg'
+import Stocks from '../images/stocks.jpeg'
+import Covid from '../images/covid.jpeg'
 
 const ProjectHolder = styled.div`
     display:flex;
@@ -45,6 +47,34 @@ function Projects() {
                         1:"Worked in a small, fast paced team to develop an automated tax softare for the Ethereum network.",
                         2:"Used a data base to index previous users' data to speed up load-time by 25%.",
                         3:"Frontend written in React"
+                    }
+                }}
+            />
+            <Project 
+                projectName = "" 
+                img = {Stocks} 
+                description = {`Keep tabs on your assets.`} 
+                modalData = {{
+                    title:"Portfolio Java App" ,
+                    link : "",
+                    bullets:{
+                        1:"I designed an app that let the user input their stock/crypto ticker and holdings.",
+                        2:"Periodically fetches the price of each asset and displays data effectively to provide unique insights to the movements of your holdings.",
+                        3:"Made using Java and Java FX."
+                    }
+                }}
+            />
+            <Project 
+                projectName = "" 
+                img = {Covid} 
+                description = {`Make an account and see your local data.`} 
+                modalData = {{
+                    title:"Covid-19 Trend Tracker",
+                    link : "",
+                    bullets:{
+                        1:"Retrieved Covid-19 infection data and displayed it on the front end using React",
+                        2:"Used a database allowing users to create an account and get local data.",
+                        3:"Made using React, MySQL and AWS."
                     }
                 }}
             />

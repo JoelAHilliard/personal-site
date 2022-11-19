@@ -9,6 +9,7 @@ const Wrapper = styled.div`
     align-items:center;
     text-align:center;
     margin-top:15px;
+    min-width:275px
 `
 const Image = styled.img`
     border: 5px solid black;
@@ -27,6 +28,8 @@ const Description = styled.p`
     font-size:15px;
     margin:2px;
     font-family: 'Montserrat', sans-serif;
+    max-width:250px;
+    min-height:35px;
 `
 const GoTo = styled.a`
     text-decoration:none;
