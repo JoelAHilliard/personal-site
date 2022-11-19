@@ -27,7 +27,7 @@ const Title = styled.p`
 `
 const Description = styled.p`
     font-size:15px;
-    margin:2px;
+    margin:5px;
     font-family: 'Montserrat', sans-serif;
     max-width:250px;
     min-height:35px;
@@ -72,10 +72,10 @@ function MakeBulletList(props) {
     return (  
       <div>  
             <ModalTitle>{props.data.title}</ModalTitle>  
-                <BulletList>{listOfBullets}</BulletList>  
+            <BulletList>{listOfBullets}</BulletList>  
       </div>  
     );  
-}  
+}
 function Project(props) {
     return(
         <Wrapper>
@@ -89,45 +89,51 @@ function Project(props) {
                             borderRadius: 5,
                             backgroundColor: "#1652f0",
                             fontSize: "12px",
-                            marginTop:"10px"
                         }} 
                         variant="contained">More Info
                     </Button>
                 } 
                 position="screen center"
                 modal
+            /*Whether or not to include a visit link at {{props.modalData.link !== "" ? line 107}:*/
             >
                 {close => (
                 <div style={{padding:"15px", display:"flex", flexFlow:"column", alignItems:"center"}}>
                     
                     <MakeBulletList data={props.modalData}></MakeBulletList>
+                    
                     <div style={{display:"flex", flexFlow:"row", alignItems:"center"}}>
-                        {props.modalData.link !== "" ? 
-                        <><a style={{textDecoration:"none"}} href={props.modalData.link} target={"_blank"} rel={"noreferrer"}><Button
+                        {props.modalData.link !== "" ?
+                        
+                        /*true block*/
+                          <><a style={{textDecoration:"none"}} href={props.modalData.link} target={"_blank"} rel={"noreferrer"}>
+                                <Button
+                                        style={{
+                                            borderRadius: 5,
+                                            backgroundColor: "#1652f0",
+                                            width: "20px",
+                                            margin: "2px"
+                                        }}
+                                        variant="contained"
+                                        size="small"
+                                >
+                                Visit
+                                </Button>
+                            </a>
+                            <div>
+                                <Button
                                     style={{
                                         borderRadius: 5,
                                         backgroundColor: "#1652f0",
                                         width: "20px",
-                                        margin: "2px"
                                     }}
                                     variant="contained"
                                     size="small"
-                                >
-                                    Visit
+                                    onClick={close}>
+                                    Close
                                 </Button>
-                                </a><div>
-                                        <Button
-                                            style={{
-                                                borderRadius: 5,
-                                                backgroundColor: "#1652f0",
-                                                width: "20px",
-                                            }}
-                                            variant="contained"
-                                            size="small"
-                                            onClick={close}>
-                                            Close
-                                        </Button>
-                                    </div></>
+                             </div></>
+                        /*false block*/
                         :
                         <Button 
                             style={{
