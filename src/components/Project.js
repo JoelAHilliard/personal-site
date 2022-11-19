@@ -35,25 +35,46 @@ const GoTo = styled.a`
     text-decoration:none;
     color:black;
 `
+const BulletEntry = styled.li`
+    margin:10px;
+    max-width:80%;
+    min-width:50%;
+    @media(min-width:600px) {
+        min-width:80%;
+    }
+`
+const BulletList = styled.ul`
+    display:flex;
+    flex-flow:column;
+    align-items:center;
+
+`
+const ModalTitle = styled.h2`
+
+@media(max-width:725px) {
+    text-align:center;
+}
+`
 function MakeBulletList(props) {  
     const bullets = Object.entries(props.data.bullets); 
-    const bulletList = bullets.map(([key,val]) =>  
-      <li>{val}</li>  
+    const listOfBullets = bullets.map(([key,val]) =>  
+  
+      <BulletEntry>{val}</BulletEntry>  
     );  
     return (  
       <div>  
-            <h2>{props.data.title}</h2>  
-                <ul>{bulletList}</ul>  
+            <ModalTitle>{props.data.title}</ModalTitle>  
+                <BulletList>{listOfBullets}</BulletList>  
       </div>  
     );  
-  }  
+}  
 function Project(props) {
     return(
         <Wrapper>
-            <a target = "_blank" href = {props.link}><Image src={props.img}/></a>
+            <Image src={props.img}/>
             <GoTo target = "_blank" href = {props.link}><Title>{props.name}</Title></GoTo>
             <Description>{props.description}</Description>
-            <Popup contentStyle={{borderRadius:"15px", minWidth:"300px"}} 
+            <Popup contentStyle={{borderRadius:"15px",width:"60%", minWidth:"300px"}} 
                 trigger={
                     <Button
                         style={{
@@ -74,7 +95,7 @@ function Project(props) {
                     <MakeBulletList data={props.modalData}></MakeBulletList>
                     <div style={{display:"flex", flexFlow:"row", alignItems:"center"}}>
                         {props.modalData.link !== "" ? 
-                        <><a style={{textDecoration:"none"}} href={props.modalData.link} target={"_blank"}><Button
+                        <><a style={{textDecoration:"none"}} href={props.modalData.link} target={"_blank"} rel={"noreferrer"}><Button
                                     style={{
                                         borderRadius: 5,
                                         backgroundColor: "#1652f0",

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Project from './Project.js'
 import ETHFeesImg from '../images/ETHFees.jpg'
 import ConsensusTaxImg from '../images/consensustax.jpg'
-import GalaxyImage from '../images/galaxy.jpg'
 import Stocks from '../images/stocks.jpeg'
 import Covid from '../images/covid.jpeg'
 
@@ -25,37 +24,37 @@ function Projects() {
             <Project 
                 projectName = "ETH Fees" 
                 img = {ETHFeesImg}
-                description = "Enter a wallet address to find out unique insights" 
+                description = "Enter a wallet address to find out unique insights." 
                 modalData = {{
                     title: "ETH Fees",
                     link : "https://ethfees.xyz",
                     bullets:{
                         1:"A web-app where frequent users of the Ethereum network would come to find out how much they have spent on network fees.",
                         2:"Utilizes a Python server to speed up load time using caching to update users' database entries automatically.",
-                        3:"Frontend made with React",
+                        3:"Frontend made with React, server written in Python.",
                     }
                 }}
             />
             <Project 
                 projectName = "Consensus Tax" 
                 img = {ConsensusTaxImg} 
-                description = {`Find out your specfic tax needs at one click`} 
+                description = {`Find out your specfic tax needs at one click.`} 
                 modalData = {{
                     title:"Consensus Tax" ,
                     link : "",
                     bullets:{
                         1:"Worked in a small, fast paced team to develop an automated tax softare for the Ethereum network.",
                         2:"Used a data base to index previous users' data to speed up load-time by 25%.",
-                        3:"Frontend written in React"
+                        3:"Frontend written in React, server written in Python."
                     }
                 }}
             />
             <Project 
-                projectName = "" 
+                projectName = "Portfolio Java App" 
                 img = {Stocks} 
                 description = {`Keep tabs on your assets.`} 
                 modalData = {{
-                    title:"Portfolio Java App" ,
+                    title:"Portfolio Java App",
                     link : "",
                     bullets:{
                         1:"I designed an app that let the user input their stock/crypto ticker and holdings.",

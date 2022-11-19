@@ -18,7 +18,7 @@ import {
     color:black;
     line-height:0.5;
     padding:0;
-    width:100%
+    width:100%;
 `
 const Text = styled.p`
     font-family: 'Metropolitano', sans-serif;
