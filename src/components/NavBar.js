@@ -15,7 +15,7 @@ import {
     display: flex;
     flex-flow:row;
     justify-content:center;
-    color:black;
+    color:white;
     line-height:0.5;
     padding:0;
     width:100%;
@@ -31,8 +31,8 @@ function NavBar() {
           <BrowserRouter>
 
             <Bar>
-                <Text><Link style={{ textDecoration: 'underline',color:'black' }} to="/">Joel Hilliard</Link> -&nbsp;</Text>
-                <Text><Link style={{ textDecoration: 'underline',color:'black' }} to="/projects">Projects</Link></Text> 
+                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/">Joel Hilliard</Link> -&nbsp;</Text>
+                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/projects">Projects</Link></Text> 
             </Bar>
             
             <Routes>
