@@ -27,8 +27,6 @@ const Description = styled.p`
     font-size:15px;
     margin:2px;
     font-family: 'Montserrat', sans-serif;
-    min-width:375px;
-    max-width:375px;
 `
 const GoTo = styled.a`
     text-decoration:none;
@@ -95,7 +93,7 @@ function Project(props) {
                                             variant="contained"
                                             size="small"
                                             onClick={close}>
-                                            &times;
+                                            Close
                                         </Button>
                                     </div></>
                         :
@@ -109,7 +107,7 @@ function Project(props) {
                             variant="contained" 
                             size="small"
                             onClick={close}>
-                            &times;
+                            Close
                         </Button>
                         }
                     </div>
