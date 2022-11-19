@@ -43,7 +43,7 @@ function Projects() {
                     link : "",
                     bullets:{
                         1:"Worked in a small, fast paced team to develop an automated tax softare for the Ethereum network.",
-                        2:"Used a data base to index previous users' data to speed up load-time by 0.6s.",
+                        2:"Used a data base to index previous users' data to speed up load-time by 25%.",
                         3:"Frontend written in React"
                     }
                 }}
