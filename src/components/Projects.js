@@ -29,9 +29,9 @@ function Projects() {
                     title: "ETH Fees",
                     link : "https://ethfees.xyz",
                     bullets:{
-                        1:"A web-app where frequent users of the Ethereum network would come to find out how much they have spent on network fees.",
-                        2:"Utilizes a Python server to speed up load time using caching to update users' database entries automatically.",
-                        3:"Frontend made with React, server written in Python.",
+                        "bullet1":"A web-app where frequent users of the Ethereum network would come to find out how much they have spent on network fees.",
+                        "bullet2":"Utilizes a Python server to speed up load time using caching to update users' database entries automatically.",
+                        "bullet3":"Frontend made with React, server written in Python.",
                     }
                 }}
             />

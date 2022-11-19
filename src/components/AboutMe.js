@@ -1,4 +1,4 @@
-import React, { useForm,useEffect, useRef, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Joel from '../images/joel.png'
 import LinkedIn from '../images/16066.png'
@@ -40,10 +40,10 @@ function AboutMe(){
         <Wrapper>
             <Selfie src={Joel}/>
             <Text>Joel Hilliard</Text>
-            <Text style={{fontSize:'15px'}}>Computer Science - Univeristy of Missouri</Text>
+            <Text style={{fontSize:'15px'}}>Computer Science - Univeristy of Missouri - May 2023</Text>
             <LinkBox>
-                <a target="_blank" href="https://github.com/JoelAHilliard"><ImageBox src={Github}/></a>
-                <a target="blank" href="https://www.linkedin.com/in/joel-hilliard-3b9278192/"><ImageBox src={LinkedIn}/></a>
+                <a rel="noreferrer" target="_blank" href="https://github.com/JoelAHilliard"><ImageBox src={Github}/></a>
+                <a rel="noreferrer" target="blank" href="https://www.linkedin.com/in/joel-hilliard-3b9278192/"><ImageBox src={LinkedIn}/></a>
             </LinkBox>
         </Wrapper>
     )

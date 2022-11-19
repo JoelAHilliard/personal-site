@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { Button } from '@mui/material';
+
 const Wrapper = styled.div`
     display:flex;
     flex-flow: column;
@@ -42,11 +43,17 @@ const BulletEntry = styled.li`
     @media(min-width:600px) {
         min-width:80%;
     }
+    @media(max-width:725px) {
+        min-width:80%
+    }
 `
 const BulletList = styled.ul`
     display:flex;
     flex-flow:column;
     align-items:center;
+    @media(max-width:725px) {
+        padding-inline-start: 5px;
+    }
 
 `
 const ModalTitle = styled.h2`
@@ -56,11 +63,11 @@ const ModalTitle = styled.h2`
 }
 `
 function MakeBulletList(props) {  
+    //convert to dictionary for mapping
     const bullets = Object.entries(props.data.bullets);
-    console.log(bullets) 
+    //yells at me to have unique key
     const listOfBullets = bullets.map(([key,val]) =>  
-  
-      <BulletEntry>{val}</BulletEntry>  
+        <BulletEntry>{val}</BulletEntry>
     );  
     return (  
       <div>  
