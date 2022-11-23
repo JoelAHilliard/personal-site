@@ -5,16 +5,16 @@ import LinkedIn from '../images/16066.png'
 import Github from '../images/download.png'
 
 const Selfie = styled.img`
-width: 200px;
-height: 250px;
-border: 2px solid black;
-margin-top:20px;
+    width: 200px;
+    height: 250px;
+    border: 2px solid black;
+    margin-top:20px;    
 `
 const Wrapper = styled.div`
-display: flex;
-flex-flow:column;
-align-items:center;
-justify-content:center;
+    display: flex;
+    flex-flow:column;
+    align-items:center;
+    justify-content:center;
 
 `
 const LinkBox = styled.div`

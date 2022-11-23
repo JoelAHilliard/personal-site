@@ -79,6 +79,7 @@ function MakeBulletList(props) {
 function Project(props) {
     return(
         <Wrapper>
+            <Title>{props.modalData.title}</Title>
             <Image src={props.img}/>
             <GoTo target = "_blank" href = {props.link}><Title>{props.name}</Title></GoTo>
             <Description>{props.description}</Description>
