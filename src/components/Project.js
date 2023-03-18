@@ -62,6 +62,21 @@ const ModalTitle = styled.h2`
     text-align:center;
 }
 `
+const FadeIn = styled.div`
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+`
+
 function MakeBulletList(props) {  
     //convert to dictionary for mapping
     const bullets = Object.entries(props.data.bullets);
@@ -99,6 +114,7 @@ function Project(props) {
             /*Whether or not to include a visit link at {{props.modalData.link !== "" ? line 107}:*/
             >
                 {close => (
+                <FadeIn>
                 <div style={{padding:"15px", display:"flex", flexFlow:"column", alignItems:"center"}}>
                     
                     <MakeBulletList data={props.modalData}></MakeBulletList>
@@ -107,7 +123,7 @@ function Project(props) {
                         {props.modalData.link !== "" ?
                         
                         /*true block*/
-                          <><a style={{textDecoration:"none"}} href={props.modalData.link} target={"_blank"} rel={"noreferrer"}>
+                        <><a style={{textDecoration:"none"}} href={props.modalData.link} target={"_blank"} rel={"noreferrer"}>
                                 <Button
                                         style={{
                                             borderRadius: 5,
@@ -151,6 +167,7 @@ function Project(props) {
                         }
                     </div>
                 </div>
+                </FadeIn>
                 )}
             </Popup>
         </Wrapper>

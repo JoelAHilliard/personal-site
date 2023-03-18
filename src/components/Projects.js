@@ -5,6 +5,8 @@ import ETHFeesImg from '../images/ETHFees.jpg'
 import ConsensusTaxImg from '../images/consensustax.jpg'
 import Stocks from '../images/stocks.jpeg'
 import Covid from '../images/covid.jpeg'
+import Covlab from '../images/covlab.jpg'
+
 
 const ProjectHolder = styled.div`
     display:flex;
@@ -36,6 +38,20 @@ function Projects() {
                 }}
             />
             <Project 
+                projectName = "Mizzou Research Development Lead" 
+                img = {Covlab}
+                description = "Visualize Covid-19 trends and how Twitter data can show more insight." 
+                modalData = {{
+                    title: "Research Development Lead",
+                    link : "https://covlab.tech",
+                    bullets:{
+                        "bullet1":"I lead the development of a web-app that displays trends in Covid-19 data.",
+                        "bullet2":"Leveraged a MongoDB database to retrieve and display data in several different visual formats, including charts, graphs, and tables.",
+                        "bullet3":"Frontend made with Angular, backend written in Python using Flask.",
+                    }
+                }}
+            />
+            <Project 
                 projectName = "Consensus Tax" 
                 img = {ConsensusTaxImg} 
                 description = {`Find out your specfic tax needs at one click.`} 
@@ -45,7 +61,7 @@ function Projects() {
                     bullets:{
                         1:"Worked in a small, fast paced team to develop an automated tax softare for the Ethereum network.",
                         2:"Used a data base to index previous users' data to speed up load-time by 25%.",
-                        3:"Frontend written in React, server written in Python."
+                        3:"Frontend written in React, backend written in Python."
                     }
                 }}
             />
