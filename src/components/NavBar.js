@@ -33,7 +33,7 @@ function NavBar() {
             <Bar>
                 <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/">Home</Link> -&nbsp;</Text>
                 <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/projects">Resume</Link> -&nbsp;</Text>
-                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/projects">Projects</Link></Text> 
+                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="https://github.com/JoelAHilliard/personal-site/blob/main/src/files/resumeMay11.pdf">Projects</Link></Text> 
 
             </Bar>
             
