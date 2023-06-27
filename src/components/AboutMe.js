@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Joel from '../images/joel.png'
+import Joel from '../images/joel.jpeg'
 import LinkedIn from '../images/16066.png'
 import Github from '../images/download.png'
 
