@@ -135,7 +135,7 @@ function Project(props) {
                 <FadeIn>
                 <div style={{padding:"15px", display:"flex", flexFlow:"column", alignItems:"center"}}>
                     <div style={{display:"flex",height:"auto",flexFlow:"column",alignItems:"center",justifyContent:"center",alignContent:'center',gap:"2px"}}>
-                        <ModalTitle>{props.modalData.title}</ModalTitle>
+                        <ModalTitle>{props.modalData.title}</ModalTitle> 
                         
                     </div>
                     
