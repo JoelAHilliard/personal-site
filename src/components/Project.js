@@ -33,10 +33,10 @@ const Description = styled.p`
     max-width:250px;
     min-height:35px;
 `
-const GoTo = styled.a`
-    text-decoration:none;
-    color:black;
-`
+// const GoTo = styled.a`
+//     text-decoration:none;
+//     color:black;
+// `
 const BulletEntry = styled.li`
     margin:10px;
     max-width:80%;
@@ -76,9 +76,6 @@ const FadeIn = styled.div`
             opacity: 1;
         }
     }
-`
-const TechLogo = styled.img`
-    height:20px;
 `
 
 function MakeBulletList(props) {  
@@ -137,7 +134,7 @@ function Project(props) {
                 {close => (
                 <FadeIn>
                 <div style={{padding:"15px", display:"flex", flexFlow:"column", alignItems:"center"}}>
-                    <div style={{display:"flex",height:"auto",flexFlow:"column",height:"auto",alignItems:"center",justifyContent:"center",alignContent:'center',gap:"2px"}}>
+                    <div style={{display:"flex",height:"auto",flexFlow:"column",alignItems:"center",justifyContent:"center",alignContent:'center',gap:"2px"}}>
                         <ModalTitle>{props.modalData.title}</ModalTitle>
                         
                     </div>
