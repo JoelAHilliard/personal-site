@@ -35,7 +35,8 @@ function Projects() {
                         "bullet1":"A web-app where users can enter their crypto holdings and can see different visualizations pertaining to their portfolio.",
                         "bullet2":"Utilizes a MongoDB to store crypto asset prices, a Node API to retrieve prices, and a worker app that constantly pulls updated prices into the database every minutes.",
                         "bullet3":"Frontend made with Angular, API and worker written in Node.",
-                    }
+                    },
+                    tech:["angular-icon-logo.png","mongodb-logo-black-and-white.png","nodejs-logo-vector.svg"]
                 }}
             />
             <Project 
@@ -49,7 +50,8 @@ function Projects() {
                         "bullet1":"A web-app where frequent users of the Ethereum network would come to find out how much they have spent on network fees.",
                         "bullet2":"Utilizes a Python server to speed up load time using caching to update users' database entries automatically.",
                         "bullet3":"Frontend made with React, server written in Python.",
-                    }
+                    },
+                    tech:["react-logo-vector.svg","python-logo-only.png"]
                 }}
             />
             <Project 
@@ -63,7 +65,8 @@ function Projects() {
                         "bullet1":"I lead the development of a web-app that displays trends in Covid-19 data.",
                         "bullet2":"Leveraged a MongoDB database to retrieve and display data in several different visual formats, including charts, graphs, and tables.",
                         "bullet3":"Frontend made with Angular, backend written in Python using Flask.",
-                    }
+                    },
+                    tech:["angular-icon-logo.png","mongodb-logo-black-and-white.png","python-logo-only.png"]
                 }}
             />
             <Project 
@@ -77,7 +80,8 @@ function Projects() {
                         1:"Worked in a small, fast paced team to develop an automated tax softare for the Ethereum network.",
                         2:"Used a data base to index previous users' data to speed up load-time by 25%.",
                         3:"Frontend written in React, backend written in Python."
-                    }
+                    },
+                    tech:["react-logo-vector.svg","python-logo-only.png"]
                 }}
             />
             <Project 
@@ -105,7 +109,8 @@ function Projects() {
                         1:"Retrieved Covid-19 infection data and displayed it on the front end using React",
                         2:"Used a database allowing users to create an account and get local data.",
                         3:"Made using React, MySQL and AWS."
-                    }
+                    },
+                    tech:["react-logo-vector.svg"]
                 }}
             />
         </ProjectHolder>

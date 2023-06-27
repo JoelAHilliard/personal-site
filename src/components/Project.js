@@ -4,6 +4,7 @@ import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { Button } from '@mui/material';
 
+
 const Wrapper = styled.div`
     display:flex;
     flex-flow: column;
@@ -76,27 +77,47 @@ const FadeIn = styled.div`
         }
     }
 `
+const TechLogo = styled.img`
+    height:20px;
+`
 
 function MakeBulletList(props) {  
     //convert to dictionary for mapping
     const bullets = Object.entries(props.data.bullets);
     //yells at me to have unique key
     const listOfBullets = bullets.map(([key,val]) =>  
-        <BulletEntry>{val}</BulletEntry>
+        <BulletEntry key={key}>{val}</BulletEntry>
     );  
     return (  
       <div>  
-            <ModalTitle>{props.data.title}</ModalTitle>  
             <BulletList>{listOfBullets}</BulletList>  
       </div>  
+    );  
+}
+function MakeImageList(props) {
+    if(!props.data.tech){
+        return
+    } 
+    const images = props.data.tech;
+
+    const listOfImages = images.map((imageName, index) => {
+        const imageSrc = process.env.PUBLIC_URL + imageName;
+        return <img style={{height:"25px"}} key={index} src={imageSrc} alt={imageName} />
+    });
+
+
+    return (
+            <div style={{height:"25px",display:"flex",gap:"10px"}}>{listOfImages}</div>  
     );  
 }
 function Project(props) {
     return(
         <Wrapper>
-            <Title>{props.modalData.title}</Title>
+            <div style={{display:"flex",flexFlow:"row",height:"auto", justifyContent:"center",alignContent:"center",alignItems:"center"}}>
+                <Title>{props.modalData.title}</Title>
+            </div>
             <Image src={props.img}/>
-            <GoTo target = "_blank" href = {props.link}><Title>{props.name}</Title></GoTo>
+            {/* <GoTo target = "_blank" href = {props.link}><Title>{props.name}</Title></GoTo> */}
             <Description>{props.description}</Description>
             <Popup contentStyle={{borderRadius:"15px",width:"60%", minWidth:"300px"}} 
                 trigger={
@@ -116,13 +137,20 @@ function Project(props) {
                 {close => (
                 <FadeIn>
                 <div style={{padding:"15px", display:"flex", flexFlow:"column", alignItems:"center"}}>
+                    <div style={{display:"flex",height:"auto",flexFlow:"column",height:"auto",alignItems:"center",justifyContent:"center",alignContent:'center',gap:"2px"}}>
+                        <ModalTitle>{props.modalData.title}</ModalTitle>
+                        
+                    </div>
                     
                     <MakeBulletList data={props.modalData}></MakeBulletList>
-                    
+                    <div style={{display:"flex",height:"30px",flexFlow:"row",alignItems:"center",justifyContent:"center",alignContent:'center',gap:"2px"}}>
+                            {/* <p>Made with: </p> */}
+                            <MakeImageList data={props.modalData}></MakeImageList>
+                    </div>
+                
                     <div style={{display:"flex", flexFlow:"row", alignItems:"center"}}>
                         {props.modalData.link !== "" ?
                         
-                        /*true block*/
                         <><a style={{textDecoration:"none"}} href={props.modalData.link} target={"_blank"} rel={"noreferrer"}>
                                 <Button
                                         style={{
@@ -150,7 +178,6 @@ function Project(props) {
                                     Close
                                 </Button>
                              </div></>
-                        /*false block*/
                         :
                         <Button 
                             style={{
