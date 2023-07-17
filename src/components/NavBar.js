@@ -30,9 +30,9 @@ function NavBar() {
 
             <Bar>
                 
-                <Button style={{color:"white"}} variant="outlined"><Link style={{textDecoration:'none',color:"white"}} to="/">Home</Link></Button>
-                <Button style={{color:"white"}} variant="outlined"><Link style={{textDecoration:'none',color:"white"}} to="/resume">Resume</Link></Button>
-                <Button style={{color:"white"}} variant="outlined"><Link style={{textDecoration:'none',color:"white"}} to="/projects">Projects</Link></Button>
+                <Link style={{textDecoration:'none',color:"white"}} to="/"><Button style={{color:"white"}} variant="outlined">Home</Button></Link>
+                <Link style={{textDecoration:'none',color:"white"}} to="/resume"><Button style={{color:"white"}} variant="outlined">Resume</Button></Link>
+                <Link style={{textDecoration:'none',color:"white"}} to="/projects"><Button style={{color:"white"}} variant="outlined">Projects</Button></Link>
                 
             </Bar>
             
