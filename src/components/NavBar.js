@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import AboutMe from '../components/AboutMe.js';
 import Projects from '../components/Projects.js';
+import Resume from './Resume.js';
 import {
     BrowserRouter,
     Routes,
@@ -31,8 +32,14 @@ function NavBar() {
           <BrowserRouter>
 
             <Bar>
-                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/">Home</Link> -&nbsp;</Text>
-                <Text><a style={{ textDecoration: 'underline',color:'white' }} target='_blank' rel='noreferrer' href='https://github.com/JoelAHilliard/personal-site/blob/main/src/files/joelresume.pdf'>Resume</a> -&nbsp;</Text>
+                <Text>
+                  <Link 
+                    style={{ textDecoration: 'underline',color:'white' }} 
+                    to="/">
+                    Home
+                  </Link> 
+                  &nbsp;-&nbsp;</Text>
+                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/resume">Resume</Link>&nbsp;-&nbsp;</Text> 
                 <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/projects">Projects</Link></Text> 
 
             </Bar>
@@ -40,6 +47,7 @@ function NavBar() {
             <Routes>
               <Route exact path="/" element={<AboutMe/>} />
               <Route exact path="/projects" element={<Projects/>} />
+              <Route exact path='/resume' element={<Resume/>} />
             </Routes>
 
           </BrowserRouter>
