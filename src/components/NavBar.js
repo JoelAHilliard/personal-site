@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import AboutMe from '../components/AboutMe.js';
 import Projects from '../components/Projects.js';
 import Resume from './Resume.js';
+import { Button } from '@mui/material';
+
+
 import {
     BrowserRouter,
     Routes,
@@ -17,9 +20,7 @@ import {
     flex-flow:row;
     justify-content:center;
     color:white;
-    line-height:0.5;
-    padding:0;
-    width:100%;
+    gap:5px;
 `
 const Text = styled.p`
     font-family: 'Metropolitano', sans-serif;
@@ -32,16 +33,11 @@ function NavBar() {
           <BrowserRouter>
 
             <Bar>
-                <Text>
-                  <Link 
-                    style={{ textDecoration: 'underline',color:'white' }} 
-                    to="/">
-                    Home
-                  </Link> 
-                  &nbsp;-&nbsp;</Text>
-                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/resume">Resume</Link>&nbsp;-&nbsp;</Text> 
-                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/projects">Projects</Link></Text> 
-
+                
+                <Button style={{color:"white"}} variant="outlined"><Link style={{textDecoration:'none',color:"white"}} to="/">Home</Link></Button>
+                <Button style={{color:"white"}} variant="outlined"><Link style={{textDecoration:'none',color:"white"}} to="/resume">Resume</Link></Button>
+                <Button style={{color:"white"}} variant="outlined"><Link style={{textDecoration:'none',color:"white"}} to="/projects">Projects</Link></Button>
+                
             </Bar>
             
             <Routes>
