@@ -22,11 +22,7 @@ import {
     color:white;
     gap:5px;
 `
-const Text = styled.p`
-    font-family: 'Metropolitano', sans-serif;
-    font-size:25px;
 
-`
 function NavBar() {
     return(
       <div>
