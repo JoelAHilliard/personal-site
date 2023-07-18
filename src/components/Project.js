@@ -11,17 +11,21 @@ const Wrapper = styled.div`
     align-items:center;
     text-align:center;
     margin-top:15px;
-    min-width:275px
-`
+    width:275px;
+    max-width:300px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+f`
 const Image = styled.img`
     border: 5px solid black;
-    height: 175px;
-    width: 275px;
-    border-radius:15px;
+    height: 30%;
+    width: 100%;
+    margin: 4px 0px 0px 0px;
 `
-const Title = styled.p`
-
-    font-size:20px;
+const Title = styled.span`
+    
     margin:2px;
     font-family: 'Montserrat', sans-serif;
 
@@ -110,19 +114,18 @@ function MakeImageList(props) {
 function Project(props) {
     return(
         <Wrapper>
-            <div style={{display:"flex",flexFlow:"row",height:"auto", justifyContent:"center",alignContent:"center",alignItems:"center"}}>
-                <Title>{props.modalData.title}</Title>
-            </div>
-            <Image src={props.img}/>
-            {/* <GoTo target = "_blank" href = {props.link}><Title>{props.name}</Title></GoTo> */}
-            <Description>{props.description}</Description>
-            <Popup contentStyle={{borderRadius:"15px",width:"60%", minWidth:"300px"}} 
+            <div style={{display:"flex",flexFlow:"column",justifyContent:"space-between"}}>
+                <div style={{height:"100%"}}>
+                    <div style={{display:"flex",flexFlow:"row",height:"auto", justifyContent:"space-between",alignContent:"center",alignItems:"center",padding:"5px"}}>
+                    <Title><strong>{props.modalData.title}</strong></Title>
+                    <Popup contentStyle={{borderRadius:"15px",width:"60%", minWidth:"300px"}} 
                 trigger={
                     <Button
                         style={{
                             borderRadius: 5,
                             backgroundColor: "#1652f0",
                             fontSize: "12px",
+                            maxHeight:"33px"
                         }} 
                         variant="contained">More Info
                     </Button>
@@ -193,7 +196,14 @@ function Project(props) {
                 </div>
                 </FadeIn>
                 )}
-            </Popup>
+                    </Popup>
+                    </div>
+                    {/* <GoTo target = "_blank" href = {props.link}><Title>{props.name}</Title></GoTo> */}
+                    <Description>{props.description}</Description>
+                </div>
+                <Image src={props.img}/>
+
+            </div>
         </Wrapper>
     )
 }

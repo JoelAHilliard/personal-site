@@ -14,8 +14,6 @@ const trackPage = (page) => {
 // track initial page load
 trackPage(window.location.pathname + window.location.search);
 
-// track subsequent page views
-
 const Wrapper = styled.div`
   margin:auto;
   display:block;

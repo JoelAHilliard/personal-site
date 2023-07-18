@@ -12,7 +12,6 @@ import Nssy from '../images/nssy.png'
 const ProjectHolder = styled.div`
     display:flex;
     flex-flow:column;
-    width:80%;
     margin:auto;
     flex-wrap:wrap;
     justify-content:space-evenly;
@@ -20,6 +19,7 @@ const ProjectHolder = styled.div`
         flex-flow:row;
         flex-wrap: wrap;
     }
+   
 `
 function Projects() {
     return(
@@ -59,7 +59,7 @@ function Projects() {
                 img = {Covlab}
                 description = "Visualize Covid-19 trends and how Twitter data can show more insight." 
                 modalData = {{
-                    title: "Research Development Lead",
+                    title: "Covlab",
                     link : "https://covlab.tech",
                     bullets:{
                         "bullet1":"I lead the development of a web-app that displays trends in Covid-19 data.",
@@ -85,11 +85,11 @@ function Projects() {
                 }}
             />
             <Project 
-                projectName = "Portfolio Java App" 
+                projectName = "Portfolio App" 
                 img = {Stocks} 
                 description = {`Keep tabs on your assets.`} 
                 modalData = {{
-                    title:"Portfolio Java App",
+                    title:"Portfolio App",
                     link : "",
                     bullets:{
                         1:"I designed an app that let the user input their stock/crypto ticker and holdings.",
@@ -103,7 +103,7 @@ function Projects() {
                 img = {Covid} 
                 description = {`Make an account and see your local data.`} 
                 modalData = {{
-                    title:"Covid-19 Trend Tracker",
+                    title:"Covid-19 Trends",
                     link : "",
                     bullets:{
                         1:"Retrieved Covid-19 infection data and displayed it on the front end using React",
