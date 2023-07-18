@@ -10,12 +10,13 @@ const Wrapper = styled.div`
     flex-flow: column;
     align-items:center;
     text-align:center;
+    margin:auto;
     margin-top:15px;
     width:275px;
     max-width:300px;
     background-color: #FFFFFF;
     border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.35);
     overflow: hidden;
 f`
 const Image = styled.img`

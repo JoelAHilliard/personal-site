@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Project from './Project.js'
 import ETHFeesImg from '../images/ETHFees.png'
-import ConsensusTaxImg from '../images/consensustax.jpg'
-import Stocks from '../images/stocks.jpeg'
-import Covid from '../images/covid.jpeg'
-import Covlab from '../images/covlab.jpg'
+import ConsensusTaxImg from '../images/conensustax.png'
+import Stocks from '../images/stocks.png'
+import Covid from '../images/covid.png'
+import Covlab from '../images/covlab.png'
 import Nssy from '../images/nssy.png'
 
 
@@ -15,9 +15,17 @@ const ProjectHolder = styled.div`
     margin:auto;
     flex-wrap:wrap;
     justify-content:space-evenly;
+    gap:2px;
+    max-width:1000px;
     @media(min-width:600px){
         flex-flow:row;
         flex-wrap: wrap;
+        width:65%;
+    }
+    @media(max-width:600px){
+        flex-flow:row;
+        flex-wrap: wrap;
+        width:60%;
     }
    
 `
@@ -57,7 +65,7 @@ function Projects() {
             <Project 
                 projectName = "Mizzou Research Development Lead" 
                 img = {Covlab}
-                description = "Visualize Covid-19 trends and how Twitter data can show more insight." 
+                description = "Visualize Covid-19 trends using Twitter Data" 
                 modalData = {{
                     title: "Covlab",
                     link : "https://covlab.tech",
