@@ -42,9 +42,9 @@ function Projects() {
                     bullets:{
                         "bullet1":"A web-app where users can enter their crypto holdings and can see different visualizations pertaining to their portfolio.",
                         "bullet2":"Utilizes a MongoDB to store crypto asset prices, a Node API to retrieve prices, and a worker app that constantly pulls updated prices into the database every minutes.",
-                        "bullet3":"Frontend made with Angular, API and worker written in Node.",
+                        "bullet3":"Frontend made with Angular, API made with SpringBoot and worker written in Node.",
                     },
-                    tech:["angular-icon-logo.png","mongodb-logo-black-and-white.png","nodejs-logo-vector.svg"]
+                    tech:["angular-icon-logo.png","mongodb-logo-black-and-white.png","nodejs-logo-vector.svg","spring-2.svg"]
                 }}
             />
             <Project 
