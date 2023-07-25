@@ -6,6 +6,7 @@ import ConsensusTaxImg from '../images/consensustax.jpg'
 import Stocks from '../images/stocks.jpeg'
 import Covid from '../images/covid.jpeg'
 import Covlab from '../images/covlab.jpg'
+import Nssy from '../images/nssy.png'
 
 
 const ProjectHolder = styled.div`
@@ -23,6 +24,20 @@ const ProjectHolder = styled.div`
 function Projects() {
     return(
         <ProjectHolder>
+            <Project 
+                projectName = "Nssy Portfolio Tracker" 
+                img = {Nssy}
+                description = "Portfolio tracking for crypto assets." 
+                modalData = {{
+                    title: "Nssy",
+                    link : "https://nssy.xyz",
+                    bullets:{
+                        "bullet1":"A web-app where users can enter their crypto holdings and can see different visualizations pertaining to their portfolio.",
+                        "bullet2":"Utilizes a MongoDB to store crypto asset prices, a Node API to retrieve prices, and a worker app that constantly pulls updated prices into the database every minutes.",
+                        "bullet3":"Frontend made with Angular, API and worker written in Node.",
+                    }
+                }}
+            />
             <Project 
                 projectName = "ETH Fees" 
                 img = {ETHFeesImg}

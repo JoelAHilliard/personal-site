@@ -31,8 +31,10 @@ function NavBar() {
           <BrowserRouter>
 
             <Bar>
-                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/">Joel Hilliard</Link> -&nbsp;</Text>
+                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/">Home</Link> -&nbsp;</Text>
+                <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/projects">Resume</Link> -&nbsp;</Text>
                 <Text><Link style={{ textDecoration: 'underline',color:'white' }} to="/projects">Projects</Link></Text> 
+
             </Bar>
             
             <Routes>
