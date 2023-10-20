@@ -32,9 +32,9 @@ function NavBar() {
             </Bar>
             
             <Routes>
-              <Route exact path="/" element={<AboutMe/>} />
-              <Route exact path="/projects" element={<Projects/>} />
-              <Route exact path='/resume' element={<Resume/>} />
+              <Route exact path="/" element={<AboutMe></AboutMe>} />
+              <Route exact path="/projects" element={<Projects></Projects>} />
+              <Route exact path='/resume' element={<Resume></Resume>} />
             </Routes>
 
           </Router>
