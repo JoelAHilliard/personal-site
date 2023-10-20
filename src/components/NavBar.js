@@ -5,13 +5,8 @@ import Projects from '../components/Projects.js';
 import Resume from './Resume.js';
 import { Button } from '@mui/material';
 
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    Link,
-  } from "react-router-dom";
   const Bar = styled.div `
     text-align: left;
     padding: 5px;
@@ -26,7 +21,7 @@ import {
 function NavBar() {
     return(
       <div>
-          <BrowserRouter>
+          <Router>
 
             <Bar>
                 
@@ -42,8 +37,8 @@ function NavBar() {
               <Route exact path='/resume' element={<Resume/>} />
             </Routes>
 
-          </BrowserRouter>
-        </div>
+          </Router>
+      </div>
     )
 }
 export default NavBar;
