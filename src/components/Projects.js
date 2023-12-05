@@ -53,7 +53,7 @@ function Projects() {
                 description = "Enter a wallet address to find out unique insights." 
                 modalData = {{
                     title: "ETH Fees",
-                    link : "https://fancy-gecko-18be9a.netlify.app/",
+                    link : "https://ethfees.xyz/",
                     bullets:{
                         "bullet1":"A web-app where frequent users of the Ethereum network would come to find out how much they have spent on network fees.",
                         "bullet2":"Utilizes a Python server to speed up load time using caching to update users' database entries automatically.",
