@@ -7,6 +7,7 @@ import Stocks from '../images/stocks.png'
 import Covid from '../images/covid.png'
 import Covlab from '../images/covlab.png'
 import Nssy from '../images/nssy.png'
+import Filedrop from '../images/filedrop.png'
 
 
 const ProjectHolder = styled.div`
@@ -32,6 +33,21 @@ const ProjectHolder = styled.div`
 function Projects() {
     return(
         <ProjectHolder>
+            <Project 
+                projectName = "Filedrop" 
+                img = {Filedrop}
+                description = "Quickly transfer files from one device to another." 
+                modalData = {{
+                    title: "Filedrop",
+                    link : "https://filedrop.xyz",
+                    bullets:{
+                        "bullet1":"A web-app where users can enter their crypto holdings and can see different visualizations pertaining to their portfolio.",
+                        "bullet2":"Utilizes a MongoDB to store crypto asset prices, a Node API to retrieve prices, and a worker app that constantly pulls updated prices into the database every minutes.",
+                        "bullet3":"Frontend made with Angular, API made with SpringBoot and worker written in Node.",
+                    },
+                    // tech:["angular-icon-logo.png","mongodb-logo-black-and-white.png","nodejs-logo-vector.svg","spring-2.svg"]
+                }}
+            />
             <Project 
                 projectName = "Nssy Portfolio Tracker" 
                 img = {Nssy}

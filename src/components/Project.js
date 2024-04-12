@@ -22,6 +22,7 @@ f`
 const Image = styled.img`
     border: 5px solid black;
     height: 30%;
+    min-height:170px;
     width: 100%;
     margin: 4px 0px 0px 0px;
 `
